@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>LACOMÉ CAFE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-hover-amber">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-hover-amber">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-hover-amber">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#promotion" class="w3-button w3-block w3-hover-amber">PROMOTION</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container" id="home">
+  <div class="w3-display-middle w3-center w3-padding-large ">
+    <span class="w3-text-white">Open from 8am to 10pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">LaCOMÉ<br>Café</span>
+  </div>
+  <div class="w3-display-bottommiddle w3-center w3-padding-large">
+    <span class="w3-text-amber">416 30th April street, Tay Ninh Province Vietnam</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-amber w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT US</span></h5>
+    <p>The La COMÉ Cafe was founded in Tay Ninh Province Vietnam in 2019 by Thanh Nguyen and The co-founder is Truong Cong Hau. The two young guys decided to start the very first business which is blowing the very fresh wind to the FB industry in their hometown. We are serving comfortable seats, amazed decorations and diversity beverages.   </p>
+    <p>The menu always updates during seasons. We have the best coffee in town and we serve freash made-to-order breakfast and lunch sandwiches.</p>
+    <div class="w3-panel w3-leftbar w3-black">
+      <p><i>"The products have to worthy with the spent. At LaCOMÉ, we do it best" .</i></p>
+      <p>Co-Founder, Coffeeist and Owner: Truong Cong Hau</p>
+    </div>
+    <img src="DSCF1228.jpg" alt="Coffeeshop1" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 8am to 10pm.</p>
+    <p><strong>Address:</strong> 416 30th April street, Tay Ninh Province Vietnam</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Food');">
+        <div class="w3-col s6 tablink">Food</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Beverage');">
+        <div class="w3-col s6 tablink">Beverage</div>
+      </a>
+    </div>
+
+<!-- promtions Container -->
+<div class="w3-container" id="promotion" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+<!-- Footer -->
+<footer>
+  <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fjacktruong1397.github.io%2Ftruongconghauods2021%2F">
+                <img style="border:none;height:31px;width:31px;text-decoration:none;"
+                    src="http://myy.haaga-helia.fi/~valju/ValidatorLogos/html_logo_grayscale_31.png"
+                    alt="Valid HTML"  /></a>
+
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjacktruong1397.github.io%2Ftruongconghauods2021%2F%23about&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
+                <img style="border:none;width:88px;height:31px;text-decoration:none;"
+                     src="http://myy.haaga-helia.fi/~valju/ValidatorLogos/css_logo_grayscale_31.png"
+                     alt="Valid CSS" /></a>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
+
